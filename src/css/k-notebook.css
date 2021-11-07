@@ -6,17 +6,98 @@ CSS Theme for Notebook
 
 ----------------------------------------------------------------------------- */
 
-/* -- Text ------------------------------------------- */
 
-.k-title h1 {
-    position: absolute;
-    top: 40%; left: 50%;
-    transform: translate(-50%,-100%);
+/* -- Colors ------------------------------------------------- */
+
+:root {
+	
+	--grey: #5b5b5b;
+	--gold: #aea587;
+	
+	--text-blue: #91adc2;
+	
+}
+
+
+/* -- Setting up defaults ------------------------------------ */
+
+html, body {
+	
+	/* Set default font and size */
+	font-family: 'Verdana', Sans-Serif;
+	font-size: 14px;
+	
+}
+
+
+/* -- tag ---------------------------------------- */
+.tag {
+  
+  position: absolute;
+
+	margin-top: 10px;
+	margin-left: 10px;
+	
+	padding: 1px 8px;
+  
+  width: fit-content;
+  
+  border: 1px solid #363636;
+	border-radius: 10px;
+	
+  background-color: rgba(255, 255, 255, .4);
+	
+	font-size: 1rem;
+	text-decoration: none;
+  
+}
+
+.tag p{
+  
+  margin-top: 2px;
+  margin-bottom: 2px;
+  
+}
+
+
+/* -- Notebook header ---------------------------------------- */
+
+.k-header {
+  
+  position: relative;
     
-    color: #000000;}
+    height: 200px;
+    border-radius: 10px;
+    
+    /* Set background */
+	background-image: repeating-linear-gradient(-45deg,
+												rgba(255, 255, 255, 0.05) 0px,
+												rgba(255, 255, 255, 0.05) 2px,
+												transparent 2px,
+												transparent 4px),
+					  url(https://www.kangaroo-ai.fr/src/img/background-top-left.png),
+					  url(https://www.kangaroo-ai.fr/src/img/background-bottom-right.png),
+					  radial-gradient(circle farthest-corner at right bottom, #c1d7de 0%, #c6dae1 15%, transparent 40%),
+                      radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);
+	
+	background-position: top left, top left, bottom right;
+	background-size: auto, 25% auto, 40% auto, auto, auto;
+	background-blend-mode: normal, normal, color-burn;
+	background-repeat: no-repeat;
+  
+}
+
+.k-header h1 {
+  
+  position: absolute;
+  top: 40%; left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
 
 
-/* -- Titles ----------------------------------------- */
+/* -- Section Titles ----------------------------------------- */
 
 .k-title {
     
@@ -37,6 +118,80 @@ CSS Theme for Notebook
         transparent 4px),
       url(https://www.kangaroo-ai.fr/src/img/kangaroo-logo-250px.png),
       radial-gradient(circle farthest-corner at right bottom, #c1d7de 0%, #c6dae1 15%, transparent 40%),
-      radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);}
+      radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);
+  
+}
                                       
-                                      
+
+.k-title h1 {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-100%);
+    
+    color: #000000;
+  
+}
+
+
+/* ----- Component: BOX ------------------------------------------------------ */
+
+.box {
+	
+	width: fit-content;
+	
+	/* style */
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	border: 1px solid grey;
+	border-bottom: 10px solid var(--text-blue);
+	
+	/* transition */
+	transition: box-shadow .3s;
+	transition: border-bottom .3s;
+	
+}
+
+.box:hover {
+	
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+	border-bottom: 10px solid black;
+	
+}
+
+.box-header {
+  
+  
+  
+  background-image: 
+      repeating-linear-gradient(-45deg, 
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 4px),
+      radial-gradient(circle farthest-corner at right bottom, #c1d7de 0%, #c6dae1 15%, transparent 40%),
+      radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);
+  
+  
+  
+  
+	
+	/* margin & padding */
+	padding: 1px 10px 1px 10px;
+
+	/* style */
+	/*background-color: rgba(255, 255, 255, 0.5);*/
+	border-radius: 10px 10px 0px 0px;
+	
+}
+
+.box-body {
+	
+	padding: 10px;
+	
+}
+
+.box h2{
+	
+	color: black;
+	
+}
