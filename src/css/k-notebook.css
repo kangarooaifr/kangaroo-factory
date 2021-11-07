@@ -1,0 +1,42 @@
+
+/* -----------------------------------------------------------------------------
+
+Kangaroo.AI Factory
+CSS Theme for Notebook
+
+----------------------------------------------------------------------------- */
+
+/* -- Text ------------------------------------------- */
+
+h1 {
+    position: absolute;
+    top: 40%; left: 50%;
+    transform: translate(-50%,-100%);
+    
+    color: #000000;}
+
+
+/* -- Titles ----------------------------------------- */
+
+.k-title {
+    
+    position: relative;
+    
+    height: 80px;
+    border-radius: 10px;
+    
+    /* Set background */
+    background-repeat: no-repeat;
+    background-size: auto, auto 80%, auto, auto;
+    background-position: top left, top 55% left 1%, bottom right;
+    background-image: 
+      repeating-linear-gradient(-45deg, 
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 4px),
+      url(https://www.kangaroo-ai.fr/src/img/kangaroo-logo-250px.png),
+      radial-gradient(circle farthest-corner at right bottom, #c1d7de 0%, #c6dae1 15%, transparent 40%),
+      radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);}
+                                      
+                                      
