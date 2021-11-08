@@ -29,37 +29,27 @@ html, body {
 	
 }
 
+h1 {
+    text-align:center;
+}
 
-/* -- tag ---------------------------------------- */
-.tag {
+h2 {
+    text-align:center;
+}
+
+/* -- Layouts ------------------------------------------------- */
+
+.flex-row-container {
   
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-	
-	margin-left: 0;
-	margin-bottom: 0;
-	
-	padding: 1px 8px;
-	
-  
-  width: fit-content;
-  height: fit-content;
-  
-  border: 1px solid #363636;
-	border-radius: 10px;
-	
-  background-color: rgba(255, 255, 255, .4);
-	
-	font-size: 1rem;
-	text-decoration: none;
+  display : flex;
+  flex-direction : row;
   
 }
 
-.tag p{
+.flex-col-container {
   
-  margin-top: 2px;
-  margin-bottom: 2px;
+  display : flex;
+  flex-direction : column;
   
 }
 
@@ -113,7 +103,7 @@ html, body {
 
 /* -- Section Titles ----------------------------------------- */
 
-.k-title {
+.k-section {
     
     position: relative;
     
@@ -137,7 +127,7 @@ html, body {
 }
                                       
 
-.k-title h1 {
+.k-section h1 {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-100%);
@@ -147,11 +137,64 @@ html, body {
 }
 
 
-/* ----- Component: BOX ------------------------------------------------------ */
+/* -- Notebook footer ---------------------------------------- */
 
-.box {
+.k-footer {
+  
+  position: relative;
+    
+  height: 50px;
+  border-radius: 10px;
+    
+  /* Set background */
+	background-image: repeating-linear-gradient(-45deg,
+												rgba(255, 255, 255, 0.05) 0px,
+												rgba(255, 255, 255, 0.05) 2px,
+												transparent 2px,
+												transparent 4px),
+					  url(https://www.kangaroo-ai.fr/src/img/background-top-left.png),
+					  url(https://www.kangaroo-ai.fr/src/img/background-bottom-right.png),
+					  radial-gradient(circle farthest-corner at right bottom, #c1d7de 0%, #c6dae1 15%, transparent 40%),
+            radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);
 	
-	width: fit-content;
+	background-position: top left, top left, bottom right;
+	background-size: auto, 15% auto, 15% auto, auto, auto;
+	background-blend-mode: normal, normal, color-burn;
+	background-repeat: no-repeat;
+  
+}
+
+.k-footer h1 {
+  
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-100%);
+    
+    color: #000000;
+  
+}
+
+/* ----- Component: GREY BOX ------------------------------------------------ */
+
+.k-gbox {
+  
+  position: relative;
+  
+  width: 100%;
+
+  padding: 30px;
+  
+  background-color: f2f2f2;
+  border-radius: 10px;
+  
+}
+
+
+/* ----- Component: VERTICAL BOX ------------------------------------------------------ */
+
+.k-vbox {
+	
+	/*width: fit-content;*/
 	
 	/* style */
 	background-color: rgba(255, 255, 255, 0.2);
@@ -165,16 +208,16 @@ html, body {
 	
 }
 
-.box:hover {
+.k-vbox:hover {
 	
 	box-shadow: 0 0 11px rgba(33,33,33,.2);
 	border-bottom: 10px solid black;
 	
 }
 
-.box-header {
+.k-vbox-header {
   
-  
+  position: relative;
   
   background-image: 
       repeating-linear-gradient(-45deg, 
@@ -186,26 +229,114 @@ html, body {
       radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 10%, #ffffff 60%);
   
   
-  
-  
-	
 	/* margin & padding */
 	padding: 1px 10px 1px 10px;
 
 	/* style */
-	/*background-color: rgba(255, 255, 255, 0.5);*/
 	border-radius: 10px 10px 0px 0px;
 	
 }
 
-.box-body {
+.k-vbox-body {
 	
-	padding: 10px;
+	padding: 30px;
 	
 }
 
-.box h2{
+
+/* ----- Component: HORIZONTAL BOX ------------------------------------------------------ */
+
+.k-hbox {
+  
+  display : flex;
+  flex-direction : row;
+  
+  border-radius: 10px;
+  
+	border: 1px solid grey;
+	border-bottom: 10px solid var(--text-blue);
 	
-	color: black;
+	/* transition */
+	transition: box-shadow .3s;
+	transition: border-bottom .3s;
+               
+}
+
+.k-hbox:hover {
 	
+	box-shadow: 0 0 11px rgba(33,33,33,.2);
+	border-bottom: 10px solid black;
+	
+}
+
+      
+.k-hbox-left {
+  
+   position: relative;
+   
+   padding: 30px;
+   
+   background-image: 
+      repeating-linear-gradient(-45deg, 
+        rgba(255, 255, 255, 0.05) 0px,
+        rgba(255, 255, 255, 0.05) 2px,
+        transparent 2px,
+        transparent 4px),
+      radial-gradient(circle farthest-corner at right bottom, #c1d7de 0%, #c6dae1 15%, transparent 40%),
+      radial-gradient(circle farthest-corner at 15% 10%, #307890 0%, #307890 5%, #ffffff 80%);
+   
+   border-top-left-radius: 10px;
+   /*border-bottom-left-radius: 10px;*/
+   
+ }
+
+
+.k-hbox-right {
+  
+  padding: 30px;
+  
+  background-color: rgba(255, 255, 255, 0.1);
+  
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  vertical-align: middle;
+  
+}
+
+
+/* -- Component: TAG ---------------------------------------- */
+
+.k-tag {
+  
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+	
+	margin-left: 0;
+	margin-bottom: 0;
+	
+	padding: 1px 8px;
+	
+  
+  width: fit-content;
+  height: fit-content;
+  
+  border: 1px solid #363636;
+	border-radius: 10px;
+	
+  background-color: rgba(255, 255, 255, .4);
+	
+	font-size: 1rem;
+	text-decoration: none;
+  
+}
+
+.k-tag p{
+  
+  margin-top: 1px;
+  margin-bottom: 1px;
+  
+  font-size: 12px;
+  
 }
