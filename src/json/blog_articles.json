@@ -1,7 +1,7 @@
 {
 	"articles":[
-  		{"title":"My first article", "author":"Anna", "category":"Category" },
-  		{"title":"My second article", "author":"Smith", "category":"Dummy" },
-  		{"title":"My third article", "author":"Jones", "category":"Category" }
+  		{"title":"My first article", "author":"Anna", "date":"2021/11/26", "category":"Category", "project":"Project" },
+  		{"title":"My second article", "author":"Smith", "date":"2021/11/25", "category":"Dummy", "project":"Project" },
+  		{"title":"My third article", "author":"Jones", "date":"2021/11/24", "category":"Category", "project":"none" }
 	]
 }
