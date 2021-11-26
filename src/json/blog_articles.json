@@ -1,7 +1,7 @@
 {
 	"articles":[
-  		{"title":"My first article", "author":"Anna" },
-  		{"title":"My second article", "author":"Smith" },
-  		{"title":"My third article", "author":"Jones" }
+  		{"title":"My first article", "author":"Anna", "category":"Category" },
+  		{"title":"My second article", "author":"Smith", "category":"Dummy" },
+  		{"title":"My third article", "author":"Jones", "category":"Category" }
 	]
 }
