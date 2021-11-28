@@ -1,7 +1,7 @@
 {
 	"articles":[
-  		{"title":"My latest article", "author":"Anna", "date":"2021/11/26", "category":"Category", "project":"Project", "header"="header_3" },
-  		{"title":"My second latest article", "author":"Smith", "date":"2021/11/25", "category":"Dummy", "project":"Project", "header"="header_4" },
-  		{"title":"My third latest article", "author":"Jones", "date":"2021/11/24", "category":"Category", "project":"none", "header"="header_5" }
+  		{"title":"My latest article", "author":"Anna", "date":"2021/11/26", "category":"Category", "project":"Project", "header":"header_3" },
+  		{"title":"My second latest article", "author":"Smith", "date":"2021/11/25", "category":"Dummy", "project":"Project", "header":"header_4" },
+  		{"title":"My third latest article", "author":"Jones", "date":"2021/11/24", "category":"Category", "project":"none", "header":"header_5" }
 	]
 }
