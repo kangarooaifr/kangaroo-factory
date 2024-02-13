@@ -1,7 +1,5 @@
-# kangaroo-factory
-The Kangaroo.AI Factory repository
 
-This repository contains things I want to reuse and make available online.
+This repository contains things I want to reuse in the future kwidget R package.
 
-CSS Theme for Notebooks
-- Kaggle
+- CSS Theme
+- widget functions to return html
