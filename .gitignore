@@ -27,4 +27,3 @@ vignettes/*.pdf
 *.knit.md
 # R Environment Variables
 .Renviron
-kangaroo-factory.Rproj
