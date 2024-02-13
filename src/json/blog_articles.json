@@ -1,7 +1,0 @@
-{
-	"articles":[
-  		{"title":"My latest article", "author":"Anna", "date":"November 26, 2021", "category":"Category", "project":"Project", "header":"header_3" },
-  		{"title":"My second latest article", "author":"Smith", "date":"November 25, 2021", "category":"Dummy", "project":"Project", "header":"header_4" },
-  		{"title":"My third latest article", "author":"Jones", "date":"November 24, 2021", "category":"Category", "project":"none", "header":"header_5" }
-	]
-}
